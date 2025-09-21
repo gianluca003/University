@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Album</title>
+    <link rel="icon" href="images/img-logo.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  <body class="custom-album-body" onload="setPage()" >
+
+    <!--Waiting-->
+    <div class="custom-open-window z-3 d-flex align-items-center justify-content-center d-none" id="waiting">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-5 card m-auto custom-font-poppins-300 py-0 " >
+            <div class="card-body py-0">
+              <a class="list-group-item list-group-item-action text-center py-0" id="waiting">
+                <img src="https://media.tenor.com/qE6OZbzx1C8AAAAi/abell46s-sticker.gif" alt="Waiting..." class="custom-waiting mt-3" id="waiting_img">
+                <p class="mb-3 text-truncate mt-1" >Waiting...</p>
+              </a>
+            </div>
+            
+
+        </div>
+       
+        </div>
+
+      </div>
+    </div>
+  <!--End Waiting-->
+    
+       <!--Windows statistics-->
+       <div class="custom-open-window z-2 d-none " id="window_statistics">
+        <div class="container">
+  
+          <div class="col-lg-6 col-md-8 col-sm-12 card mt-5 m-auto custom-font-poppins-300" >
+  
+            <div class="card-body m-3">
+  
+              <div class="float-end bolder px-2 mt-1" onclick="closeWindow('window_statistics','menu')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </div>
+
+                <h2>Statistics:</h2>
+                <div class="container custom-font-poppins-500">
+                  <div class="col-12 mt-3" ><span class="div bg-dark rounded">&nbsp;</span>&nbsp;Total cards: <span id="stat_TotalCards"></span></div>
+                  <div class="col-12 mt-3"><span class="div custom-bg-legendary rounded">&nbsp;</span>&nbsp;Legendaries  cards: <span id="stat_LegendaryCards"></span></div>
+                  <div class="col-12 mt-3" ><span class="div custom-bg-red rounded ">&nbsp;</span>&nbsp;Heroics cards: <span id="stat_HeroicCards"></span></div>
+                  <div class="col-12 mt-3" ><span class="div custom-bg-mythic rounded ">&nbsp;</span>&nbsp;Mythics cards: <span id="stat_MythicCards"></span></div>
+                  <div class="col-12 mt-3" ><span class="div custom-bg-blue rounded">&nbsp;</span>&nbsp;Super cards: <span id="stat_SuperCards"></span></div>
+                    <div class="col-12 mt-3" ><span class="div  custom-bg-grey rounded">&nbsp;</span>&nbsp;Commons cards: <span id="stat_CommonCards"></span></div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--End Windows statistics-->
+
+     <!--Window Error-->
+ <div class="custom-open-window d-none z-2" id="window_error">
+  <div class="container">
+
+    <div class="col-lg-6 col-md-8 col-sm-12 card mt-5  alert alert-danger m-auto custom-font-poppins-300" >
+
+      <div class="card-body ">
+
+        <div class="float-end bolder px-2 mt-1" onclick="closeWindow('window_error','menu')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+      </div>
+
+          <h2>Error:</h2>
+          <div class="container custom-font-poppins-400">
+              <ul id="msg_list" class="list-group">
+              </ul>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Windows Error-->
+
+     <!-- Menu -->
+     <nav id="menu" class="navbar navbar-expand-lg z-1 custom-image-cover custom-font-poppins-700 sticky-top">
+      <div class="container-fluid custom-nav-lg custom-nav ">
+
+      
+        <img class="custom-logo-img custom-logo-img-md" src="images/img-logo.png">
+        <a class="navbar-brand custom-logo-lg custom-logo-md" href="#">Universe Heros</a>
+      
+
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="custom-toggler-icon-md custom-toggler-icon-top-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-mid-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-btm-md"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse custom-margin-options-lg" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto  navbar-nav-scroll custom-font-poppins-500-lg custom-font-poppins-600-md custom-scroll" style="--bs-scroll-height: 100px;">
+          
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle px-3  custom-menu-option-lg custom-menu-option-md custom-underline"  id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Other
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                <li><a class="dropdown-item" href="album.html">Album</a></li>
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="trades.html">Trades</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/api-docs/">Developer docs</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3 custom-menu-option-lg custom-menu-option-md custom-underline" aria-current="page" href="shop.html">Shop</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link px-3 custom-menu-option-lg custom-menu-option-md custom-underline" onclick="logout()">Logout</a>
+            </li>
+
+          </ul>
+
+
+          <form class="d-flex custom-margin-search-lg position-relative">
+            <input class="form-control me-2 custom-search-bar custom-font-poppins-300" id="searchInput" type="search" placeholder="Search" aria-label="Search" onkeyup="search('searchInput','search_keywordBox')">
+            <button class="custom-button-search btn btn-primary" type="button" onclick="search('searchInput','search_keywordBox')"></button>
+            <div id="search_keywordBox" class="dropdown-menu w-100 p-2 shadow-lg mt-5 custom-bg-black d-none d-block">
+  
+            </div>
+        </form>
+    
+        </div>
+        
+      </div>
+    </nav>
+    <!--End Menu -->
+
+    <!--Container-->
+   <div class="container mt-5 mb-4 custom-font-poppins-300">
+
+        <!--Options-->
+        <div class="d-flex  justify-content-between ">
+            <a href="#" class="btn custom-bg-black custom-btn-dark custom-font-light" onclick="resizeScreen()">
+                <svg id="iconMin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit d-none" viewBox="0 0 16 16">
+                    <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z"/>
+                  </svg>
+                <svg  id="iconFull" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+                 <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5"/>
+               </svg>  
+               <span id="fullScreenText">Full screen</span>
+               </a>
+
+            <select class="form-select custom-bg-light-grey border w-25" aria-label="Default select example" id="album_filter" onchange="getCards()">
+                <option selected value="">Filter</option>
+                <option value="my_cards">My cards</option>
+                <option value="duplicates">Duplicates</option>
+                <option value="legendary">Legendaries</option>
+                <option value="heroic">Heroics</option>
+                <option value="mythic">Mythics</option>
+                <option value="super">Super</option>
+                <option value="common">Commons</option>
+            </select>
+
+            <nav class="navbar py-0 d-none d-lg-inline">
+              <div class="container-fluid px-0">
+                <form class="d-flex">
+                  <input class="form-control custom-search-bar-contents custom-bg-light-grey" value="" type="search" placeholder="Search hero" aria-label="Search" id="search_hero">
+                  <button onclick="getCards()" type="button" class="btn custom-bg-black custom-btn-dark custom-font-light custom-btn-search-contents"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg></button>
+                </form>
+              </div>
+            </nav>
+        
+            <a href="#" class="btn custom-bg-black custom-btn-dark custom-font-light" onclick="openWindow('window_statistics','menu')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
+              </svg> <span class="d-none d-md-inline"> Statistics</span></a>
+        </div> 
+        <!--End Options-->
+
+         <!--Album-->
+         <div class="custom-bg-album mt-5 py-5  shadow rounded " id="album">
+        </div>
+       <!--End Album-->
+
+       <div class=" row mt-5 ">
+        <div class="col-4 d-flex justify-content-center">
+          <a onclick="changePage(false)" id="btn_prev" class="btn custom-underline custom-font-light custom-btn-pagination d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+            <span class="d-none d-sm-inline"> Previous</span></a>
+        </div>
+        
+        <div class="col-4 d-flex justify-content-center"> 
+          <form class="custom-font-poppins-300 justify-content-center">
+          <div data-mdb-input-init class="form-outline">
+            <input type="number"  onchange="getCards()" placeholder="Page" id="page_number" value="1" class="form-control custom-input-line rounded custom-border-pagination custom-none-arrow-input" />
+          </div>
+          </form>
+        </div>
+
+        <div class="col-4 d-flex justify-content-center"> 
+          <a onclick="changePage(true)" id="btn_next"  class="btn custom-underline custom-font-light custom-btn-pagination ">
+            <span class="d-none d-sm-inline">
+              Next 
+          </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+            </svg>
+        </a>
+      </div>
+       </div>
+       
+
+   </div>
+   <!--End Container-->
+
+  <!--footer-->
+  <div id="footer" class="custom-transparent-dark text-center text-lg-start text-white mt-5">
+
+    <div class="container p-4">
+  
+      <div class="row justify-content-between">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <img class="custom-logo-img" src="images/img-logo.png">
+          <img class="custom-marvel-img" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2017%2F08%2FMarvel-Logo.png&f=1&nofb=1&ipt=ead0c6a20c9e542924db5a1bb69645f6a974f0f032e2544eebc43a8bd4da7f4c&ipo=images">
+        </div>
+       
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Cards</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="./album.html" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Album</a>
+            </li>
+            <li>
+              <a href="./trades.html" class="custom-font-light "><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Trades</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Developer</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://localhost:3000/api-docs/" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Developer Docs</a>
+            </li>
+          </ul>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.906)">
+      © Universe Heros
+    </div>
+  </div>
+  <!--End Footer-->
+  
+  <script src="style/effects.js"></script>
+  <script src="script/s_album.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+

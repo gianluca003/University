@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="icon" href="images/img-logo.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
+
+     <!--Window error-->
+     <div class="custom-open-window d-none z-2" id="window">
+      <div class="container">
+
+        <div class="col-lg-6 col-md-8 col-sm-12 card mt-5  alert alert-danger m-auto custom-font-poppins-300" >
+
+          <div class="card-body ">
+
+            <div class="float-end bolder px-2 mt-1" onclick="closeWindow('window','menu')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+          </div>
+
+              <h2>Error:</h2>
+              <div class="container custom-font-poppins-400">
+                  <ul id="msg_list" class="list-group">
+                  </ul>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--End Windows error-->
+    
+    <!-- Menu basic-->
+    <nav id="menu-basic" class="navbar navbar-expand-lg z-1 custom-image-cover custom-font-poppins-700 sticky-top">
+      <div class="container-fluid custom-nav-lg custom-nav ">
+
+      
+        <img class="custom-logo-img custom-logo-img-md" src="images/img-logo.png">
+        <a class="navbar-brand custom-logo-lg custom-logo-md" href="#">Universe Heros</a>
+      
+
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="custom-toggler-icon-md custom-toggler-icon-top-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-mid-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-btm-md"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse custom-margin-options-lg" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto  navbar-nav-scroll custom-font-poppins-500-lg custom-font-poppins-600-md custom-scroll" style="--bs-scroll-height: 100px;">
+          
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle px-3  custom-menu-option-lg custom-menu-option-md custom-underline"  id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Other
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                <li><a class="dropdown-item" href="signup.html">Sign up</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/api-docs/">Developer docs</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" aria-current="page" href="shop.html">Shop</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" href="login.html">Login</a>
+            </li>
+
+          </ul>
+
+
+          <form class="d-flex custom-margin-search-lg position-relative">
+            <input class="form-control me-2 custom-search-bar custom-font-poppins-300" id="basic_searchInput" type="search" placeholder="Search" aria-label="Search" onkeyup="search('basic_searchInput','search_basic_keywordBox')">
+            <button class="custom-button-search btn btn-primary" type="button" onclick="search('basic_searchInput','search_basic_keywordBox')"></button>
+            <div id="search_basic_keywordBox" class="dropdown-menu w-100 p-2 shadow-lg mt-5 custom-bg-black d-none d-block">
+  
+            </div>
+        </form>
+    
+        </div>
+        
+      </div>
+    </nav>
+    <!--End Menu basic -->
+
+   
+    <div class="px-4 py-5 px-md-5 z-0 text-start ">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0 d-none d-lg-block">
+
+            <img class="img-fluid custom-img-login" src="images/ironman.png">
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            
+            <div class="card border-0 custom-dark custom-font-light custom-dark-shadow">
+              <div class="card-body py-4 px-md-5">
+                <h2 class="mb-4 custom-font-poppins-700">Login</h2>
+
+                <form class="custom-font-poppins-300 justify-content-center">
+              
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" class="form-control" id="username" onkeyup="checkUsername()"/>
+                      <label class="form-label" id="l_username" for="form3Example1">Username</label>
+                    </div>
+  
+                  <div data-mdb-input-init class="form-outline mb-4 z-0">
+                    <div class=" input-group ">
+                      <input type="password" id="password" class="form-control" onkeyup="checkPassword()" />
+                      <button class="btn custom-bg-grey custom-password-show z-0" onclick="activePasswordEye(this,'password')" type="button">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill d-none" viewBox="0 0 16 16">
+                          <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+                          <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill " viewBox="0 0 16 16">
+                          <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                          <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <label class="form-label" for="form3Example4" id="l_password">Password</label>
+                  </div>
+
+                  <!-- Submit button -->
+                  <a type="button" onclick="sendForm()" class="btn custom-button-dark-red btn-block float-end mb-4">
+                    Login
+                  </a>
+              
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    Don't have an account yet? <a class="custom-font-light" href="signup.html">sign up</a>
+                  </div>
+                  
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div id="basic_footer" class="custom-transparent-dark text-center text-lg-start text-white mt-5">
+
+      <div class="container p-4">
+    
+        <div class="row justify-content-between">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <img class="custom-logo-img" src="images/img-logo.png">
+            <img class="custom-marvel-img" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2017%2F08%2FMarvel-Logo.png&f=1&nofb=1&ipt=ead0c6a20c9e542924db5a1bb69645f6a974f0f032e2544eebc43a8bd4da7f4c&ipo=images">
+          </div>
+         
+          <div class="col-lg-3 col-md-6 ">
+            <h5 class="custom-font-light px-2">Account</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                <a href="./signup.html" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Sign up</a>
+              </li>
+              <li>
+                <a href="./login.html" class="custom-font-light "><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Login</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 ">
+            <h5 class="custom-font-light px-2">Developer</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://localhost:3000/api-docs/" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Developer Docs</a>
+              </li>
+            </ul>
+          </div>
+          
+  
+        </div>
+      </div>
+  
+      <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.906)">
+        © Universe Heros
+      </div>
+    </div>
+  <!--End Footer-->
+   
+    <script src="script/s_login.js"></script>
+    <script src="style/effects.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

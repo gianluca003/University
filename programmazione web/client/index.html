@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="icon" href="images/img-logo.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+
+  <body onload="setHomepage()">
+
+     <!-- Menu Logged-->
+   <nav id="menu" class="navbar navbar-expand-lg d-none custom-image-cover custom-font-poppins-700 sticky-top">
+    <div class="container-fluid custom-nav-lg custom-nav ">
+
+    
+      <img class="custom-logo-img custom-logo-img-md" src="images/img-logo.png">
+      <a class="navbar-brand custom-logo-lg custom-logo-md" href="#">Universe Heros</a>
+    
+
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="custom-toggler-icon-md custom-toggler-icon-top-md"></span>
+        <span class="custom-toggler-icon-md custom-toggler-icon-mid-md"></span>
+        <span class="custom-toggler-icon-md custom-toggler-icon-btm-md"></span>
+      </button>
+
+     
+      <div class="collapse navbar-collapse custom-margin-options-lg " id="navbarScroll">
+
+        <ul class="navbar-nav me-auto  navbar-nav-scroll custom-font-poppins-500-lg custom-font-poppins-600-md custom-scroll" style="--bs-scroll-height: 100px;">
+        
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle px-3  custom-menu-option-lg custom-menu-option-md custom-underline"  id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Other
+            </a>
+
+            <ul class="dropdown-menu " aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+              <li><a class="dropdown-item" href="album.html">Album</a></li>
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="trades.html">Trades</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="http://localhost:3000/api-docs/">Developer docs</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" aria-current="page" href="shop.html">Shop</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" onclick="logout()">Logout</a>
+          </li>
+
+        </ul>
+
+        <form class="d-flex custom-margin-search-lg position-relative">
+          <input class="form-control me-2 custom-search-bar custom-font-poppins-300" id="searchInput" type="search" placeholder="Search" aria-label="Search" onkeyup="search('searchInput','search_keywordBox')">
+          <button class="custom-button-search btn btn-primary" type="button" onclick="search('searchInput','search_keywordBox')"></button>
+          <div id="search_keywordBox" class="dropdown-menu w-100 p-2 shadow-lg mt-5 custom-bg-black d-none d-block">
+
+          </div>
+      </form>
+          
+      </div>
+      
+    </div>
+  </nav>
+  <!--End Menu Logged-->
+
+     <!-- Menu basic-->
+     <nav id="menu-basic" class="navbar navbar-expand-lg  custom-image-cover custom-font-poppins-700 sticky-top">
+      <div class="container-fluid custom-nav-lg custom-nav ">
+
+      
+        <img class="custom-logo-img custom-logo-img-md" src="images/img-logo.png">
+        <a class="navbar-brand custom-logo-lg custom-logo-md" href="#">Universe Heros</a>
+      
+
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="custom-toggler-icon-md custom-toggler-icon-top-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-mid-md"></span>
+          <span class="custom-toggler-icon-md custom-toggler-icon-btm-md"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse custom-margin-options-lg" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto  navbar-nav-scroll custom-font-poppins-500-lg custom-font-poppins-600-md custom-scroll" style="--bs-scroll-height: 100px;">
+          
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle px-3  custom-menu-option-lg custom-menu-option-md custom-underline"  id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Other
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                <li><a class="dropdown-item" href="signup.html">Sign up</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/api-docs/">Developer docs</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" aria-current="page" href="shop.html">Shop</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link px-3   custom-menu-option-lg custom-menu-option-md custom-underline" href="login.html">Login</a>
+            </li>
+
+          </ul>
+
+
+          <form class="d-flex custom-margin-search-lg position-relative">
+            <input class="form-control me-2 custom-search-bar custom-font-poppins-300" id="basic_searchInput" type="search" placeholder="Search" aria-label="Search" onkeyup="search('basic_searchInput','search_basic_keywordBox')">
+            <button class="custom-button-search btn btn-primary" type="button" onclick="search('basic_searchInput','search_basic_keywordBox')"></button>
+            <div id="search_basic_keywordBox" class="dropdown-menu w-100 p-2 shadow-lg mt-5 custom-bg-black d-none d-block">
+  
+            </div>
+        </form>
+        
+        </div>
+        
+      </div>
+    </nav>
+    <!--End Menu basic -->
+
+
+    <div class="container custom-container-homepage-cards ">
+      <h3 class="text-center custom-font-poppins-500 mb-4 ">Collect them all!</h3>
+      <!-- Cards -->
+      <div class="row">
+  
+        <div class=" col-md-6 col-lg-3 mt-3 d-flex justify-content-center">
+  
+          <div class="custom-flip-card ">
+
+            <div class="custom-flip-card-inner">
+                <div class="custom-flip-card-front custom-dark-shadow">
+                <img src="http://i.annihil.us/u/prod/marvel/i/mg/8/70/4c002dee5207a.jpg" class="img-fluid rounded-top custom-h-94 w-100" alt="card">
+                <div class="custom-line-btm-card custom-card-legendary"></div>
+                </div> 
+                
+                <div class="custom-flip-card-back bg-dark">
+                <h5 class="m-1 mt-3 custom-font-poppins-500 text-truncate">Black Widow (Yelena Belova)</h5>
+                <div class="custom-card-information m-2 t" style="height: 90px; overflow: hidden;"></div>
+                <div class="custom-card-information mt-1" style="height: 20px;font-size: 17px;"><b>Rarity:</b> Legendary</div>
+                </div>
+    
+            </div>
+            </div>
+
+        </div>
+
+        <div class=" col-md-6 col-lg-3 mt-3 d-flex justify-content-center ">
+  
+          <div class="custom-flip-card">
+            <div class="custom-flip-card-inner">
+
+                <div class="custom-flip-card-front custom-dark-shadow">
+                <img src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg" class="img-fluid rounded-top w-100 custom-h-94" alt="card">
+                <div class="custom-line-btm-card custom-card-heroic"></div>
+                </div>
+
+                <div class="custom-flip-card-back bg-dark">
+                <h5 class="m-1 mt-3 custom-font-poppins-500 text-truncate">Iron Man</h5>
+                <div class="custom-card-information m-2 t" style="height: 90px; overflow: hidden;">Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence to make the world a safer, better place as Iron Man.</div>
+                <div class="custom-card-information mt-1" style="height: 20px;font-size: 17px;"><b>Rarity:</b> Heroic</div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class=" col-md-6 col-lg-3 mt-3 d-flex justify-content-center">
+  
+          <div class="custom-flip-card">
+            <div class="custom-flip-card-inner">
+
+                <div class="custom-flip-card-front custom-dark-shadow custom-card-mythic">
+                <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/30/535ff3bef14c1.jpg" class="img-fluid w-100 h-100" alt="card">
+                </div>
+
+                <div class="custom-flip-card-back bg-dark">
+                <h5 class="m-1 mt-3 custom-font-poppins-500 text-truncate">Paladin</h5>
+                <div class="custom-card-information m-2 t" style="height: 90px; overflow: hidden;"></div>
+                <div class="custom-card-information mt-1" style="height: 20px;font-size: 17px;"><b>Rarity:</b> Mythic</div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class=" col-md-6 col-lg-3 mt-3 d-flex justify-content-center">
+  
+          <div class="custom-flip-card">
+            <div class="custom-flip-card-inner">
+
+                <div class="custom-flip-card-front custom-card-super custom-dark-shadow">
+                <img src="http://i.annihil.us/u/prod/marvel/i/mg/8/a0/4feb34f2017a0.jpg" class="img-fluid h-100 w-100" alt="card">
+                </div>
+
+                <div class="custom-flip-card-back bg-dark">
+                <h5 class="m-1 mt-3 custom-font-poppins-500 text-truncate">X-Men (Ultimate)</h5>
+                <div class="custom-card-information m-2 t" style="height: 90px; overflow: hidden;"></div>
+                <div class="custom-card-information mt-1" style="height: 20px;font-size: 17px;"><b>Rarity:</b> Super</div>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+
+
+      </div>
+      <!-- End Cards -->   
+   </div>
+   
+   <!--Posts-->
+   <div class="row m-0 align-items-center mt-5 ">
+
+    <div class="col-sm-6 mb-3 mb-sm-0 mt-lg-5" >
+      <div class="card custom-transparent-dark">
+        <div class="card-body custom-font-light px-5">
+          <h4 class="card-title custom-font-poppins-600 mt-3" id="title_one"></h4>
+
+          <div class="d-flex align-items-center justify-content-center w-100 mt-2 mb-2"><div class="rounded w-100" style="border: 1px solid rgba(127, 126, 126, 0.721);"></div></div> 
+
+          <p class="card-text custom-font-poppins-400 mb-3" id="description_one" style="font-size: 18px;"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 mt-lg-5 px-5">
+      <div class="card ">
+        <div class="card-body px-0 py-0">
+         <img class="img-fluid" id="post_one" src="">
+        </div>
+      </div>
+    </div>
+   </div>
+
+    <div class="row m-0 align-items-center mt-5 ">
+
+      <div class="col-sm-6 mt-lg-5 px-5 ">
+
+        <div class="card ">
+          <div class="card-body px-0 py-0">
+            <img class="img-fluid" id="post_two" src="">
+          </div>
+  
+        </div>
+      </div>
+
+    <div class="col-sm-6 mb-3 mb-sm-0 mt-lg-5 mt-3" >
+      <div class="card custom-transparent-dark">
+        <div class="card-body custom-font-light px-5">
+          <h4 class="card-title custom-font-poppins-600 mt-3 " id="title_two"></h4>
+
+          <div class="d-flex align-items-center justify-content-center w-100 mt-2 mb-2"><div class="rounded w-100" style="border: 1px solid rgba(127, 126, 126, 0.721);"></div></div> 
+
+          <p class="card-text custom-font-poppins-400 mb-3" id="description_two" style="font-size: 18px;"></p>
+        </div>
+      </div>
+    </div>
+   </div>
+   <!--End Posts-->
+
+<!--footer-->
+  <div id="basic_footer" class="custom-transparent-dark text-center text-lg-start text-white mt-5">
+
+    <div class="container p-4">
+  
+      <div class="row justify-content-between">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <img class="custom-logo-img" src="images/img-logo.png">
+          <img class="custom-marvel-img" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2017%2F08%2FMarvel-Logo.png&f=1&nofb=1&ipt=ead0c6a20c9e542924db5a1bb69645f6a974f0f032e2544eebc43a8bd4da7f4c&ipo=images">
+        </div>
+       
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Account</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="./signup.html" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Sign up</a>
+            </li>
+            <li>
+              <a href="./login.html" class="custom-font-light "><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Login</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Developer</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://localhost:3000/api-docs/" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Developer Docs</a>
+            </li>
+          </ul>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.906)">
+      © Universe Heros
+    </div>
+  </div>
+
+  <div id="footer" class="custom-transparent-dark text-center text-lg-start text-white mt-5 d-none">
+
+    <div class="container p-4">
+  
+      <div class="row justify-content-between">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <img class="custom-logo-img" src="images/img-logo.png">
+          <img class="custom-marvel-img" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2017%2F08%2FMarvel-Logo.png&f=1&nofb=1&ipt=ead0c6a20c9e542924db5a1bb69645f6a974f0f032e2544eebc43a8bd4da7f4c&ipo=images">
+        </div>
+       
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Cards</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="./album.html" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Album</a>
+            </li>
+            <li>
+              <a href="./trades.html" class="custom-font-light "><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Trades</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 ">
+          <h5 class="custom-font-light px-2">Developer</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://localhost:3000/api-docs/" class="custom-font-light "><i class="fas fa-at fa-fw fa-sm me-2"></i>Developer Docs</a>
+            </li>
+          </ul>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.906)">
+      © Universe Heros
+    </div>
+  </div>
+            
+  <!--End Footer-->
+
+        <script src="script/s_index.js"></script>
+        <script src="style/effects.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

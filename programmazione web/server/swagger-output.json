@@ -1,0 +1,1054 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Universe Hero album API",
+    "description": "These are the bees for interacting with the server for managing a virtual cards album, purchasing packages, managing packages, managing users and exchanging cards",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/user": {
+      "post": {
+        "description": "Questa api permette la creazione di un nuovo utente.\nI parametri inerenti alla carta di credito possono essere nulli, questo perché è possibile aggiungere tali dati tramite un'altra api ('/payment')",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "Mario"
+                },
+                "lastName": {
+                  "example": "Rossi"
+                },
+                "username":{
+                  "example": "Mario001"
+                },
+                "email":{
+                  "example": "mario.rossi@domain.com"
+                },
+                "password":{
+                  "example": "&Abc123&"
+                },
+                "hero":{
+                  "example": "Spider-Man (Peter Parker)"
+                },
+                "credits":{
+                  "example": 0
+                },
+                "credit card":{
+                  "example":{ "nameHolder": null,
+                              "surnameHolder": null,
+                              "number":null,
+                              "type": null,
+                              "expireDate": null,
+                              "cvv": null 
+                            }
+                },
+                "signupDate":{
+                  "example":"01-01-2024"
+                }
+
+            }
+          }
+        }
+        ],
+        "responses": { 
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+        
+      },
+      "put": {
+        "description": "Questa api permette la modifica dei dati di un'utente. E' possibile chiamare l'api soltanto se si è già in possesso di un account.\nL'uid è un parametro obbligatorio. I parametri tra [] devono essere inseriti dall'utente",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid":{
+                  "example":"[uid user]"
+                },
+                "user": {
+                  "example":{
+                    "[field to modify]" : "[value]"
+                  } 
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resource updated successfully"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/{uid}": {
+      "get": {
+        "description": "Dato un uid, restituisce tutti i dati inerenti ad un'utente.\nE' presente anche il campo 'maxTotalCards' per indicare le carte totali che un'utente può ottenere. Il campo 'totalCards' indica il numero di carte che possiede l'utente attualmente",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Elimina il profilo di un'utente, comprese le carte che possiede, e le proposte di scambio create",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "description": "Se le credenziali sono corrette, il server restituisce l'uid dell'utente",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username":{
+                  "example": "Mario001"
+                },
+                "password":{
+                  "example": "&Abc123&"
+                }
+            }
+          }
+        }
+        ],
+        "responses": {
+            "200": {
+              "description": "Ok"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+        }
+      }
+    },
+    "/packets/drafts": {
+      "get": {
+        "description": "Restituisce tutti i pacchetti creati dall'admin non ancora pubblicati nello shop. Questi pacchetti sono visibili solo all'admin, l'unico utente abilitato ad effetuare la chiamata.\nBisogna passare l'uid dell'admin tramite query",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "type": "string",
+            "required":true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Unauthorized"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Con questa api è possibile creare dei pacchetti nelle bozze. Non è necessario impostare tutti i tipi di rarità che si possono trovare all'interno di un pacchetto (in questo esempio vengono scelte tutte le rarita'). Il numero di carte totali può non corrispondere alla somma delle carte scelte per ogni, questo è possibile attivando la flag random e impostandola a true. in questo modo è il server che genera casualmente la rarità delle carte manacanti durante l'acquisto da parte di un utente. Il parametro special indica se si tratta di un pacchetto in offerta o no. Il server inoltre controlla che non ci siano pacchetti con lo stesso titolo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid admin]"
+                },
+                "title": {
+                  "example": "Test"
+                },
+                "color": {
+                  "example": "#b50606"
+                },
+                "cost": {
+                  "example": "10"
+                },
+                "description":{
+                  "example":"Qui vengono inserite le informazioni del pacchetto"
+                },
+                "totalCards":{
+                  "example":10
+                },
+                "cards":{
+                  "example":{
+                    "legendaries": 1,
+                    "heroics": 1,
+                    "mythics": 1,
+                    "super": 1,
+                    "commons": 1
+                  }
+                },
+                "random":{
+                  "example":true
+                },
+                "special":{
+                  "example":false
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Questa api permette all'admin di modificare i campi dei pacchetti in draft. E' necessario inserire l'uid dell'admin, per farsi autenticare dal server, e l'id del pacchetto, per indicare a quale pacchetto fa riferimento la modifica",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid admin]"
+                },
+                "packet":{
+                  "example": {
+                    "id":"[packet id]",
+                    "[field to modify]" : "[value]"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/packets/drafts/{id}": {
+      "get": {
+        "description": "Questa api restituisce un singolo pacchetto in bozza. Per ottenere le informazioni del pacchetto richiesto, è necassario inviare l'uid dell'admin tramite query nell'uri. L'admin è l'unico utente abilitato a vedere i pacchetti contenuti in draft (bozza)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "admin",
+            "in": "query",
+            "type": "string",
+            "required":true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Elimina un pacchetto in bozza. E' necessario inviare l'uid dell'admin tramite query dell'uri, e l'id del pacchetto tramite path. ",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "admin",
+            "in": "query",
+            "type": "string",
+            "required":true
+          }
+          
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/packets": {
+      "get": {
+        "description": "Questa api restituisce tutti i pacchetti attivi, acquistabili nello shop. Non richiede alcun tipo di id perché i pacchetti possono essere visti anche da utenti senza un account",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Questa api prende l'id di un pacchetto in draft e lo sposta nella collection tra i pacchetti attivi (acquistabili nello shop). Affinchè venga attivato un pacchetto, è necessario che prima si trovi in draft. Questa azione è eseguibile solo da un'utente admin",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "type": "string",
+            "required":true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid admin]"
+                },
+                "id": {
+                  "example": "[packet ID]"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/packets/{id}": {
+      "delete": {
+        "description": "Questa api disabilita un pacchetto attivo eliminandolo tra i pacchetti attivi, spostandolo nuovamente in draft. Per eliminare definitivamente un pacchetto, bisogna eliminarlo anche dai pacchetti in draft. Bisogna passare l'id del pacchetto tramite path, e l'uid dell'admin tramite query dell'uri. Questa azione è eseguibile solo dall'admin",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "admin",
+            "in": "query",
+            "type": "string",
+            "required":true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/post": {
+      "get": {
+        "description": "Questa api restituisce i post pubblicati dall'admin. I post sono delle semplici immagini con delle didascalie. Nel sito vengono utilizzare per l'homepage. Non è necessario essere registrati per eseguire questa azione",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Questa api permette di aggiornare le immagini o le descrizioni dei post pubblicati da un'admin. I parametri 'article' e 'image' sono dei boolean, in base al parametro da modificare, bisogna inizializzare correttamente true/false. Se si modifica l'immagine o la descrizione (incluso il titolo), non è necessario inviare i campo dell'altro. Ad esempio, se si desidera modificare il titolo, il campo image verrà inizializzato a false e il parametro url non verrà inviato. Questa azione è eseguibile solo dall'admin ",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid admin]"
+                },
+                "index": {
+                  "example": "[number of article]"
+                },
+                "title":{
+                  "example": "[title of article]"
+                },
+                "description":{
+                  "example": "[description of article]"
+                },
+                "url":{
+                  "example": "[url of image]"
+                },
+                "article": {
+                  "example": "[Boolean]"
+                },
+                "image": {
+                  "example": "[Boolean]"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/payment/{uid}": {
+      "get": {
+        "description": "Questa api restituisce tutti i dati della carta di credito di un'utente registrato. Il cvv non viene restituito per motivi di sicurezza. Questa azione può essere eseguita solo dagli utenti che utilizzano l'album (non dagli admin).",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/payment": {
+      "put": {
+        "description": "Questa api aggiorna le informazioni della carta di credito di un'utente. E' necessario inviare l'uid dell'utente e i campi che si desidera modificare. ",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid user]"
+                },
+                "creditCard": {
+                  "example":{
+                    "[field to modify]":"[value]"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/heros": {
+      "get": {
+        "description": "Questa api restituisce tutti gli eroi che iniziano con una certa sequenza di caratteri. L'api funge solo da ricerca. Se non si inseriscono le iniziali di un supereroe, non restituirà alcuna informazione.",
+        "parameters": [
+          {
+            "name": "nameStartWith",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/purchase/{uid}/{id}": {
+      "get": {
+        "description": "Questa api permette la'acquisto di un singolo pacchetto di figurine. All'interno del path bisogna inserire l'uid e l'id del pacchetto che si desidera acquistare. Per acquistare un pacchetto è necessario che le informazioni della carta di credito, associate all'uid dell'utente, siano state inserite. Inoltre è necessario possedere un certo numero di crediti per procedere all'acquisto. Questa api ci assicura che la figurina abbia un'immagine. Il server è stato progettato per distribuire soltanto le figurine che contengono un'immagine valida. Questa azione è eseguibile solo da un'utente che possiede l'album.",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/credits": {
+      "post": {
+        "description": "Questa api permette l'acquisto di crediti per acquistare, successivamente, i pacchetti di figuirine. Per acquistare i crediti è necessario aver impostato correttamente le informazioni della carta di credito associata ad un'utente. Questa azione è eseguibile solo dagli utenti che possiedono un album.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid user]"
+                },
+                "credits": {
+                  "example": "[number of credits]"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cards/{uid}": {
+      "get": {
+        "description": "Questa api restituisce le carte che possiede al momento un'utente. E' possibile utilizzare diversi filtri. Le carte sono organizzate per offset (pagine dell'album). Ogni carta appartiene ad una pagina. Se si esegue una chiamata senza alcun filtro, il server restituirà tutte le carte della prima pagina (offset 0). Le pagine totali sono 37.\n<ul><li><b>Offset</b>: numero della pagina dell'album (di default è uguale a 0)</li>\n<li><b>Filter: </b>my_cards, duplicates, legendary, heroic, mythic, super, common</li><li><b>Hero</b>:Caratteri contenuti nel nome degli eroi</li></ul>\nLa logica degli offset è applicabile anche in combinazione con altri filtri, questo perché i filtri restituisco le carte a gruppi di 20.",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "hero",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/statistics/{uid}": {
+      "get": {
+        "description": "Questa api restituisce le statistiche di un'utente. Per statistiche si intendono i dati inerenti alle carte nell'album, ad esempio quante carte totali si hanno, e quante carte per ogni tipo possiede l'utente. Questa azione è eseguibile solo da un'utente che possiede un album",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/details/{hero}/{uid}": {
+      "get": {
+        "description": "Questa api restituisce i dettagli di una carta. E' possibile ottenere i dettagli soltanto se si è in possesso di tale carta. E' necessario inviare l'id della carta, e l'uid del possessore. Questa azione è eseguibile soltanto dagli utenti che possiedono un album.",
+        "parameters": [
+          {
+            "name": "hero",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/comics/{comicID}": {
+      "get": {
+        "description": "Questa api restituisce i dettagli inerenti ad un comic della marvel. Questa azione è eseguibile da tutti.",
+        "parameters": [
+          {
+            "name": "comicID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+      }
+    },
+    "/stories/{storiesID}": {
+      "get": {
+        "description": "Questa api restituisce i dettagli inerenti ad una story della marvel. Questa azione è eseguibile da tutti.",
+        "parameters": [
+          {
+            "name": "storiesID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "200": {
+          "description": "Ok"
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      }
+    },
+    "/series/{seriesID}": {
+      "get": {
+        "description": "Questa api restituisce i dettagli inerenti ad una serie della marvel. Questa azione è eseguibile da tutti.",
+        "parameters": [
+          {
+            "name": "seriesID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "200": {
+          "description": "Ok"
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      }
+    },
+    "/events/{eventsID}": {
+      "get": {
+        "description": "Questa api restituisce i dettagli inerenti ad un evento della marvel. Questa azione è eseguibile da tutti.",
+        "parameters": [
+          {
+            "name": "eventsID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "200": {
+          "description": "Ok"
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      }
+    },
+    "/cards/info/{uid}": {
+      "get": {
+        "description": "Questa api restituisce tutte le informazioni di base di una carta, senza interrogare i server della marvel per ottenere maggiori informazioni. Le carte non vengono passate a gruppi in base all'offset, perché la mancata interazione con i server della marvel permette di ridurre la latenza notevolmente. E' inoltre possibile applicare un filtro per ottere i doppioni (filter=duplicates) o in base alle rarità (ad esempio: filter=legendary)",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trades": {
+      "post": {
+        "description": "Questa api permette di pubblicare una proposta di scambio. Prima di pubblicare la proposta verrano fatti i dovuti controlli, e nel caso di esito positivo verranno immediatamente decurtati i crediti e/o le carte offerte. Nella creazione della richiesta è possibile offrire solo carte doppione. Inoltre non è possibile offrire due carte uguali. Nella richiesta si possono chiedere carte generiche per tipo, ad esempio 1 carta legendaria e 1 carta mitica, oppure delle carte specifiche, ad esempio la carta 'Spider-man (Noir)'. Questa azione è eseguibile solo dagli utente che possiedono un album.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid admin]"
+                },
+                "request":{
+                    "example":{
+                      "credits":"[value to request]",
+                      "totalCards":"[numeber of cards to request]",
+                      "rarities":{
+                        "legendary": "[value]",
+                        "heroic": "[value]",
+                        "mythic": "[value]",
+                        "super": "[value]",
+                        "common": "[value]"
+                    },
+                    "specifics": ["array of heros ID to request"]
+                    }
+                },
+                "offer":{
+                  "example":{
+                  "credits":"[value to offer]",
+                  "specifics": ["array of heros ID to offer"]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trades/{uid}": {
+      "get": {
+        "description": "Questa api permette di acquisire l'elenco delle richieste di scambio pubblicate dagli utenti. Le proposte vengono inoltrate a gruppi di 20, perciò è necessario richiedere l'offset a cui siamo interressati. Di default l'offet è uguale a 0. La funzione invierà tutte le proposte di scambio che non appartengono all'utente che fa la chiamata (tutte le proposte con uid diverso da chi sta facendo la chiamata). E' inoltre possibile utilizzare 2 filtri: trade=open, per le richieste ancora aperte, oppure trade=close, per le richieste soddisfatte (quindi per gli accordi già conclusi). Questa azione è eseguibile solo dagli utenti che possiedono un album.",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "trade",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trades/myOffers/{uid}": {
+      "get": {
+        "description": "Questa api restituisce tutte le richieste di scambio dell'utente che esegue la chiamata. Questa azione è eseguibile  solo dagli utenti che possiedono un album.",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trades/myOffers/{uid}/{id}": {
+      "delete": {
+        "description": "Questa api permette di eliminare una proposta di scambio di un'utente. E' necessario inviare l'uid dell'utente, e l'id della richiesta di scambio. Questa azione è eseguibile dagli utenti che possiedono un album.",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trades/deal": {
+      "post": {
+        "description": "Questa api permette ad un utente di concludere un'affare. Nel caso fossero presenti delle richieste generiche (le carte devono semplicemente soddisfare le rarità richieste), bisogna indicare l'id delle carte per ogni rarità richiesta. Se non ci dovessero essere queste richieste, è sufficiente inviare il proprio uid e l'id della proposta di scambio.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "example": "[uid user]"
+                }, 
+                "trade": {
+                  "example": "[trade id]"
+                },
+                "rarities": {
+                  "example":{
+                    "legendary": ["array of IDs"],
+                    "heroic":  ["array of IDs"],
+                    "mythic":  ["array of IDs"],
+                    "super":  ["array of IDs"],
+                    "common":  ["array of IDs"]
+                  }
+               }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Unauthorized"
+          },
+          "400": {
+            "description": "Unauthorized"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

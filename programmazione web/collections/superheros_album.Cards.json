@@ -1,0 +1,1408 @@
+[{
+  "_id": {
+    "$oid": "66d1db1f61d11310fdbf9ee6"
+  },
+  "hero": 1011588,
+  "rarity": "legendary",
+  "name": "Whiplash (Anton Vanko)",
+  "index": 40,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db1f61d11310fdbf9ee7"
+  },
+  "hero": 1009324,
+  "rarity": "heroic",
+  "name": "Gorgon",
+  "index": 110,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db1f61d11310fdbf9ee8"
+  },
+  "hero": 1010975,
+  "rarity": "mythic",
+  "name": "Shadowcat (Age of Apocalypse)",
+  "index": 284,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db1f61d11310fdbf9ee9"
+  },
+  "hero": 1009592,
+  "rarity": "super",
+  "name": "Silver Surfer",
+  "index": 394,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db1f61d11310fdbf9eea"
+  },
+  "hero": 1009330,
+  "rarity": "common",
+  "name": "Guardian",
+  "index": 685,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db8c61d11310fdbf9eeb"
+  },
+  "hero": 1009563,
+  "rarity": "legendary",
+  "name": "Scorpion (Mac Gargan)",
+  "index": 47,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db8c61d11310fdbf9eec"
+  },
+  "hero": 1009372,
+  "rarity": "heroic",
+  "name": "J. Jonah Jameson",
+  "index": 129,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db8c61d11310fdbf9eed"
+  },
+  "hero": 1010794,
+  "rarity": "mythic",
+  "name": "Spider-Woman (Mattie Franklin)",
+  "index": 301,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db8c61d11310fdbf9eee"
+  },
+  "hero": 1009472,
+  "rarity": "super",
+  "name": "Nightcrawler",
+  "index": 466,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db8c61d11310fdbf9eef"
+  },
+  "hero": 1010691,
+  "rarity": "common",
+  "name": "Molly Hayes",
+  "index": 609,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db9d61d11310fdbf9ef0"
+  },
+  "hero": 1013190,
+  "rarity": "legendary",
+  "name": "Morgan Le Fay",
+  "index": 33,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db9d61d11310fdbf9ef1"
+  },
+  "hero": 1009243,
+  "rarity": "heroic",
+  "name": "Colossus",
+  "index": 182,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db9d61d11310fdbf9ef2"
+  },
+  "hero": 1009421,
+  "rarity": "mythic",
+  "name": "Mandarin",
+  "index": 273,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db9d61d11310fdbf9ef3"
+  },
+  "hero": 1014812,
+  "rarity": "super",
+  "name": "Thunderbolt Ross",
+  "index": 545,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1db9d61d11310fdbf9ef4"
+  },
+  "hero": 1009150,
+  "rarity": "common",
+  "name": "Agent Zero",
+  "index": 926,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbb361d11310fdbf9ef5"
+  },
+  "hero": 1009619,
+  "rarity": "heroic",
+  "name": "Gwen Stacy",
+  "index": 128,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbb361d11310fdbf9ef6"
+  },
+  "hero": 1010945,
+  "rarity": "mythic",
+  "name": "Magneto (House of M)",
+  "index": 315,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbb361d11310fdbf9ef7"
+  },
+  "hero": 1011426,
+  "rarity": "super",
+  "name": "Scarlet Spider (Kaine)",
+  "index": 566,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbb361d11310fdbf9ef8"
+  },
+  "hero": 1010836,
+  "rarity": "common",
+  "name": "Alex Power",
+  "index": 632,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbf861d11310fdbf9ef9"
+  },
+  "hero": 1012478,
+  "rarity": "legendary",
+  "name": "Frenzy",
+  "index": 28,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbf861d11310fdbf9efa"
+  },
+  "hero": 1009157,
+  "rarity": "heroic",
+  "name": "Spider-Girl (Anya Corazon)",
+  "index": 176,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbf861d11310fdbf9efb"
+  },
+  "hero": 1017472,
+  "rarity": "mythic",
+  "name": "Cable (X-Men: Battle of the Atom)",
+  "index": 350,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbf861d11310fdbf9efc"
+  },
+  "hero": 1010883,
+  "rarity": "super",
+  "name": "Wrecking Crew",
+  "index": 371,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dbf861d11310fdbf9efd"
+  },
+  "hero": 1009468,
+  "rarity": "common",
+  "name": "Namora",
+  "index": 647,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc1261d11310fdbf9efe"
+  },
+  "hero": 1011758,
+  "rarity": "legendary",
+  "name": "Attuma",
+  "index": 17,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc1261d11310fdbf9eff"
+  },
+  "hero": 1011220,
+  "rarity": "mythic",
+  "name": "Mockingbird",
+  "index": 207,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc1261d11310fdbf9f00"
+  },
+  "hero": 1017320,
+  "rarity": "super",
+  "name": "Iron Man (Iron Man 3 - The Official Game)",
+  "index": 515,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc1261d11310fdbf9f01"
+  },
+  "hero": 1010872,
+  "rarity": "common",
+  "name": "Vector",
+  "index": 819,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc3e61d11310fdbf9f02"
+  },
+  "hero": 1011907,
+  "rarity": "legendary",
+  "name": "Bethany Cabe",
+  "index": 24,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc3e61d11310fdbf9f03"
+  },
+  "hero": 1009363,
+  "rarity": "heroic",
+  "name": "Imperial Guard",
+  "index": 137,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc3e61d11310fdbf9f04"
+  },
+  "hero": 1011010,
+  "rarity": "mythic",
+  "name": "Spider-Man (Ultimate)",
+  "index": 300,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc3e61d11310fdbf9f05"
+  },
+  "hero": 1017319,
+  "rarity": "super",
+  "name": "Rogue (Deadpool)",
+  "index": 509,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc3e61d11310fdbf9f06"
+  },
+  "hero": 1011288,
+  "rarity": "common",
+  "name": "Jackal",
+  "index": 624,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc5561d11310fdbf9f07"
+  },
+  "hero": 1009466,
+  "rarity": "heroic",
+  "name": "Namor",
+  "index": 155,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc5561d11310fdbf9f08"
+  },
+  "hero": 1010963,
+  "rarity": "mythic",
+  "name": "Quicksilver (Ultimate)",
+  "index": 308,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc5561d11310fdbf9f09"
+  },
+  "hero": 1009224,
+  "rarity": "super",
+  "name": "Captain Marvel (Mar-Vell)",
+  "index": 478,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc5561d11310fdbf9f0a"
+  },
+  "hero": 1011250,
+  "rarity": "common",
+  "name": "Katie Power",
+  "index": 813,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc6f61d11310fdbf9f0b"
+  },
+  "hero": 1011793,
+  "rarity": "legendary",
+  "name": "Belasco",
+  "index": 27,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc7061d11310fdbf9f0c"
+  },
+  "hero": 1009362,
+  "rarity": "heroic",
+  "name": "Iceman",
+  "index": 197,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc7061d11310fdbf9f0d"
+  },
+  "hero": 1009588,
+  "rarity": "mythic",
+  "name": "Sif",
+  "index": 217,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc7061d11310fdbf9f0e"
+  },
+  "hero": 1011019,
+  "rarity": "super",
+  "name": "Molecule Man",
+  "index": 380,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc7061d11310fdbf9f0f"
+  },
+  "hero": 1010701,
+  "rarity": "common",
+  "name": "Elsa Bloodstone",
+  "index": 976,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f10"
+  },
+  "hero": 1010776,
+  "rarity": "common",
+  "name": "Danny Rand",
+  "index": 771,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f11"
+  },
+  "hero": 1009417,
+  "rarity": "heroic",
+  "name": "Magneto",
+  "index": 185,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f12"
+  },
+  "hero": 1014198,
+  "rarity": "legendary",
+  "name": "Outlaw (Inez Temple)",
+  "index": 18,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f13"
+  },
+  "hero": 1011297,
+  "rarity": "super",
+  "name": "Agent Brand",
+  "index": 451,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f14"
+  },
+  "hero": 1010933,
+  "rarity": "mythic",
+  "name": "Iceman (Ultimate)",
+  "index": 319,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f15"
+  },
+  "hero": 1011112,
+  "rarity": "common",
+  "name": "The Twelve",
+  "index": 612,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dc8d61d11310fdbf9f16"
+  },
+  "hero": 1009440,
+  "rarity": "heroic",
+  "name": "Mephisto",
+  "index": 160,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f17"
+  },
+  "hero": 1014873,
+  "rarity": "heroic",
+  "name": "Spider-Man (2099)",
+  "index": 146,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f18"
+  },
+  "hero": 1009297,
+  "rarity": "heroic",
+  "name": "Falcon",
+  "index": 149,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f19"
+  },
+  "hero": 1009573,
+  "rarity": "common",
+  "name": "Shadow King",
+  "index": 700,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f1a"
+  },
+  "hero": 1009625,
+  "rarity": "common",
+  "name": "Stepford Cuckoos",
+  "index": 635,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f1b"
+  },
+  "hero": 1011330,
+  "rarity": "legendary",
+  "name": "Revanche",
+  "index": 1,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1dca161d11310fdbf9f1c"
+  },
+  "hero": 1009720,
+  "rarity": "common",
+  "name": "Wong",
+  "index": 911,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1e29b6666eef88ad9e106"
+  },
+  "hero": 1011876,
+  "rarity": "legendary",
+  "name": "Isaiah Bradley",
+  "index": 59,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1e29b6666eef88ad9e107"
+  },
+  "hero": 1010908,
+  "rarity": "mythic",
+  "name": "Beast (Ultimate)",
+  "index": 330,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1e29b6666eef88ad9e108"
+  },
+  "hero": 1010726,
+  "rarity": "super",
+  "name": "M.O.D.O.K.",
+  "index": 467,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d1e29b6666eef88ad9e109"
+  },
+  "hero": 1010366,
+  "rarity": "common",
+  "name": "Boom Boom",
+  "index": 824,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d20a3ba31c39fadfffc031"
+  },
+  "hero": 1009619,
+  "rarity": "heroic",
+  "name": "Gwen Stacy",
+  "index": 128,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a3ba31c39fadfffc032"
+  },
+  "hero": 1010908,
+  "rarity": "mythic",
+  "name": "Beast (Ultimate)",
+  "index": 330,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a3ba31c39fadfffc033"
+  },
+  "hero": 1017327,
+  "rarity": "super",
+  "name": "Captain America (Marvel War of Heroes)",
+  "index": 518,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a3ba31c39fadfffc034"
+  },
+  "hero": 1011287,
+  "rarity": "common",
+  "name": "Warlock (Technarchy)",
+  "index": 661,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a9fbe35e34be119a35f"
+  },
+  "hero": 1009381,
+  "rarity": "heroic",
+  "name": "Jubilee",
+  "index": 191,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a9fbe35e34be119a360"
+  },
+  "hero": 1010981,
+  "rarity": "mythic",
+  "name": "Sunfire (Age of Apocalypse)",
+  "index": 249,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a9fbe35e34be119a361"
+  },
+  "hero": 1009251,
+  "rarity": "super",
+  "name": "Crimson Dynamo",
+  "index": 448,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20a9fbe35e34be119a362"
+  },
+  "hero": 1011328,
+  "rarity": "common",
+  "name": "Maestro",
+  "index": 723,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20af9d53d37b9eadd3b0c"
+  },
+  "hero": 1009717,
+  "rarity": "heroic",
+  "name": "Wolfsbane",
+  "index": 192,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20af9d53d37b9eadd3b0d"
+  },
+  "hero": 1009524,
+  "rarity": "mythic",
+  "name": "Quicksilver",
+  "index": 309,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20af9d53d37b9eadd3b0e"
+  },
+  "hero": 1017106,
+  "rarity": "super",
+  "name": "Thor (MAA)",
+  "index": 499,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20af9d53d37b9eadd3b0f"
+  },
+  "hero": 1009714,
+  "rarity": "common",
+  "name": "Wiccan",
+  "index": 643,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b69e8fe374ec10c8d74"
+  },
+  "hero": 1009610,
+  "rarity": "heroic",
+  "name": "Spider-Man (Peter Parker)",
+  "index": 82,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b69e8fe374ec10c8d75"
+  },
+  "hero": 1009301,
+  "rarity": "mythic",
+  "name": "Fantomex",
+  "index": 257,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b69e8fe374ec10c8d76"
+  },
+  "hero": 1009269,
+  "rarity": "super",
+  "name": "Death",
+  "index": 479,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b69e8fe374ec10c8d77"
+  },
+  "hero": 1010366,
+  "rarity": "common",
+  "name": "Boom Boom",
+  "index": 824,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b9fbe06bdfd56d57f94"
+  },
+  "hero": 1009214,
+  "rarity": "heroic",
+  "name": "Cable",
+  "index": 168,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b9fbe06bdfd56d57f95"
+  },
+  "hero": 1010919,
+  "rarity": "mythic",
+  "name": "Daredevil (Ultimate)",
+  "index": 322,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b9fbe06bdfd56d57f96"
+  },
+  "hero": 1011100,
+  "rarity": "super",
+  "name": "Layla Miller",
+  "index": 419,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d20b9fbe06bdfd56d57f97"
+  },
+  "hero": 1009200,
+  "rarity": "common",
+  "name": "Blockbuster",
+  "index": 820,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2be88055df9137a66b614"
+  },
+  "hero": 1009490,
+  "rarity": "heroic",
+  "name": "May Parker",
+  "index": 151,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2be88055df9137a66b615"
+  },
+  "hero": 1014858,
+  "rarity": "mythic",
+  "name": "Spider-Man (Ben Reilly)",
+  "index": 305,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2be88055df9137a66b616"
+  },
+  "hero": 1011019,
+  "rarity": "super",
+  "name": "Molecule Man",
+  "index": 380,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2be88055df9137a66b617"
+  },
+  "hero": 1010812,
+  "rarity": "common",
+  "name": "John Jameson",
+  "index": 761,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2beac055df9137a66b619"
+  },
+  "hero": 1009185,
+  "rarity": "heroic",
+  "name": "Black Cat",
+  "index": 173,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2beac055df9137a66b61a"
+  },
+  "hero": 1011005,
+  "rarity": "mythic",
+  "name": "Hulk (Ultimate)",
+  "index": 327,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2beac055df9137a66b61b"
+  },
+  "hero": 1010345,
+  "rarity": "super",
+  "name": "Sersi",
+  "index": 364,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2beac055df9137a66b61c"
+  },
+  "hero": 1009374,
+  "rarity": "common",
+  "name": "Jigsaw",
+  "index": 762,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bf7130e44629f7e9b71c"
+  },
+  "hero": 1009562,
+  "rarity": "heroic",
+  "name": "Scarlet Witch",
+  "index": 145,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bf7130e44629f7e9b71d"
+  },
+  "hero": 1009692,
+  "rarity": "mythic",
+  "name": "Toxin (Eddie Brock)",
+  "index": 356,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bf7130e44629f7e9b71e"
+  },
+  "hero": 1009306,
+  "rarity": "super",
+  "name": "Firestar",
+  "index": 476,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bf7130e44629f7e9b71f"
+  },
+  "hero": 1009211,
+  "rarity": "common",
+  "name": "Bucky",
+  "index": 621,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bfc343139bba971c30a6"
+  },
+  "hero": 1009629,
+  "rarity": "heroic",
+  "name": "Storm",
+  "index": 152,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bfc343139bba971c30a7"
+  },
+  "hero": 1010978,
+  "rarity": "mythic",
+  "name": "Storm (Ultimate)",
+  "index": 295,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bfc343139bba971c30a8"
+  },
+  "hero": 1017336,
+  "rarity": "super",
+  "name": "Deadpool (LEGO Marvel Super Heroes)",
+  "index": 502,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2bfc343139bba971c30a9"
+  },
+  "hero": 1009548,
+  "rarity": "common",
+  "name": "Betty Ross",
+  "index": 628,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c000c8e41df9e91f469c"
+  },
+  "hero": 1014528,
+  "rarity": "heroic",
+  "name": "Quake (Daisy Johnson)",
+  "index": 101,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c000c8e41df9e91f469d"
+  },
+  "hero": 1010950,
+  "rarity": "mythic",
+  "name": "Mr. Fantastic (Ultimate)",
+  "index": 312,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c000c8e41df9e91f469e"
+  },
+  "hero": 1009325,
+  "rarity": "super",
+  "name": "Norman Osborn",
+  "index": 556,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c000c8e41df9e91f469f"
+  },
+  "hero": 1009468,
+  "rarity": "common",
+  "name": "Namora",
+  "index": 647,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a4"
+  },
+  "hero": 1011515,
+  "rarity": "legendary",
+  "name": "Zeus",
+  "index": 45,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a5"
+  },
+  "hero": 1011778,
+  "rarity": "legendary",
+  "name": "Baron Mordo (Karl Mordo)",
+  "index": 64,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a6"
+  },
+  "hero": 1011313,
+  "rarity": "legendary",
+  "name": "Ender Wiggin",
+  "index": 2,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a7"
+  },
+  "hero": 1011500,
+  "rarity": "legendary",
+  "name": "Doctor Voodoo",
+  "index": 36,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a8"
+  },
+  "hero": 1017476,
+  "rarity": "legendary",
+  "name": "Kitty Pryde (X-Men: Battle of the Atom)",
+  "index": 5,
+  "quantity": 2,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46a9"
+  },
+  "hero": 1009737,
+  "rarity": "legendary",
+  "name": "Yellowjacket (Hank Pym)",
+  "index": 54,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0cbc8e41df9e91f46aa"
+  },
+  "hero": 1011442,
+  "rarity": "legendary",
+  "name": "Hit-Monkey",
+  "index": 10,
+  "quantity": 3,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0f1c8e41df9e91f46ab"
+  },
+  "hero": 1012923,
+  "rarity": "legendary",
+  "name": "Immortus",
+  "index": 53,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0f1c8e41df9e91f46ac"
+  },
+  "hero": 1009648,
+  "rarity": "super",
+  "name": "Taskmaster",
+  "index": 438,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c0f1c8e41df9e91f46ad"
+  },
+  "hero": 1009574,
+  "rarity": "common",
+  "name": "Shadowcat",
+  "index": 662,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d2c187c8e41df9e91f46b4"
+  },
+  "hero": 1012717,
+  "rarity": "legendary",
+  "name": "Agatha Harkness",
+  "index": 68,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c187c8e41df9e91f46b5"
+  },
+  "hero": 1011313,
+  "rarity": "legendary",
+  "name": "Ender Wiggin",
+  "index": 2,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c187c8e41df9e91f46b6"
+  },
+  "hero": 1012478,
+  "rarity": "legendary",
+  "name": "Frenzy",
+  "index": 28,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c187c8e41df9e91f46b7"
+  },
+  "hero": 1011588,
+  "rarity": "legendary",
+  "name": "Whiplash (Anton Vanko)",
+  "index": 40,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c2d1449fedfd18ef25e5"
+  },
+  "hero": 1009157,
+  "rarity": "heroic",
+  "name": "Spider-Girl (Anya Corazon)",
+  "index": 176,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d2c917449fedfd18ef25e6"
+  },
+  "hero": 1013190,
+  "rarity": "legendary",
+  "name": "Morgan Le Fay",
+  "index": 33,
+  "quantity": 1,
+  "user": "66d1e447c1dacf231c8e9f7b"
+},
+{
+  "_id": {
+    "$oid": "66d6c1bc85bc7505d6ab21d3"
+  },
+  "hero": 1011435,
+  "rarity": "legendary",
+  "name": "Green Goblin (Norman Osborn)",
+  "index": 50,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1bc85bc7505d6ab21d4"
+  },
+  "hero": 1009609,
+  "rarity": "heroic",
+  "name": "Spider-Girl (May Parker)",
+  "index": 174,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1bc85bc7505d6ab21d5"
+  },
+  "hero": 1009287,
+  "rarity": "mythic",
+  "name": "Electro",
+  "index": 212,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1bc85bc7505d6ab21d6"
+  },
+  "hero": 1009343,
+  "rarity": "super",
+  "name": "Hercules",
+  "index": 392,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1bc85bc7505d6ab21d7"
+  },
+  "hero": 1009146,
+  "rarity": "common",
+  "name": "Abomination (Emil Blonsky)",
+  "index": 603,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1fd711b1799235cc625"
+  },
+  "hero": 1011252,
+  "rarity": "mythic",
+  "name": "Cable (Ultimate)",
+  "index": 335,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1fd711b1799235cc626"
+  },
+  "hero": 1009340,
+  "rarity": "common",
+  "name": "Hellfire Club",
+  "index": 834,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1fd711b1799235cc627"
+  },
+  "hero": 1010738,
+  "rarity": "heroic",
+  "name": "X-Factor",
+  "index": 178,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d6c1fd711b1799235cc628"
+  },
+  "hero": 1010811,
+  "rarity": "common",
+  "name": "Man-Wolf",
+  "index": 886,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66d85ffe78448fadf7e1ddc9"
+  },
+  "hero": 1009372,
+  "rarity": "heroic",
+  "name": "J. Jonah Jameson",
+  "index": 129,
+  "quantity": 1,
+  "user": "66d3375eba82774cfdff451e"
+},
+{
+  "_id": {
+    "$oid": "66fe78b54785133071103431"
+  },
+  "hero": 1012717,
+  "rarity": "legendary",
+  "name": "Agatha Harkness",
+  "index": 69,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66fe78b54785133071103432"
+  },
+  "hero": 1011490,
+  "rarity": "mythic",
+  "name": "Hank Pym",
+  "index": 217,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+},
+{
+  "_id": {
+    "$oid": "66fe78b54785133071103433"
+  },
+  "hero": 1010870,
+  "rarity": "common",
+  "name": "Ajaxis",
+  "index": 969,
+  "quantity": 1,
+  "user": "66d1dacb61d11310fdbf9ee5"
+}]

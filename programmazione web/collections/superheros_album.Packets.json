@@ -1,0 +1,231 @@
+[{
+  "_id": {
+    "$oid": "669ea9746f0860f6d8cb798d"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "1",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Capitan packet",
+  "description": "In this packet you will find 1 heroic figurine + 4 random ones",
+  "cost": "6",
+  "totalCards": "5",
+  "random": "on",
+  "color": "#b50606",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eac856f0860f6d8cb79a3"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "1",
+    "commons": ""
+  },
+  "title": "A super packet",
+  "description": "In this packet you will find 1 super figurine + 4 random ones",
+  "cost": "6",
+  "totalCards": "5",
+  "random": "on",
+  "color": "#0f0486",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669ead2e6f0860f6d8cb79a5"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": "2"
+  },
+  "title": "Little packet",
+  "description": "In this packet you will find 2 common figurines",
+  "cost": "2",
+  "totalCards": "2",
+  "random": "on",
+  "color": "#11a206",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eaf276f0860f6d8cb79bd"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "1",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Mythical packet",
+  "description": "In this pack you will find 1 mythical figurine + 4 random",
+  "cost": "6",
+  "totalCards": "5",
+  "random": "on",
+  "color": "#9906b7",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eaf2a6f0860f6d8cb79be"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "1",
+    "commons": ""
+  },
+  "title": "Celestial Warriors",
+  "description": "In this pack you will find 10 random figurines + 1 super",
+  "cost": "9",
+  "totalCards": "11",
+  "random": "on",
+  "color": "#049bcd",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eaf2d6f0860f6d8cb79bf"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Random mix",
+  "description": "In this packet you can find 5 figurines of random rarity",
+  "cost": "5",
+  "totalCards": "5",
+  "random": "on",
+  "color": "#e7980f",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eb254d1579772c0869a1c"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Rainbow rarity",
+  "description": "In this packet you will find 7 figurines of random rarity",
+  "cost": "7",
+  "totalCards": "7",
+  "random": "on",
+  "color": "#c90089",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eb258d1579772c0869a1d"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "2",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Titans of the earth",
+  "description": "In this pack you will find 2 heroics figurines + 4 random ",
+  "cost": "8",
+  "totalCards": "6",
+  "random": "on",
+  "color": "#b75506",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "66a91d21a005b2c1a0b0d2ac"
+  },
+  "cards": {
+    "mythics": "0",
+    "legendaries": "",
+    "heroics": "2",
+    "super": "",
+    "commons": ""
+  },
+  "title": "AvengerSet",
+  "description": "In this packet you will find 2 heroic figurine + 4 random figurine",
+  "cost": "7",
+  "totalCards": "6",
+  "random": true,
+  "color": "#b50606",
+  "special": true,
+  "id": "66a91cfda005b2c1a0b0d2a9"
+},
+{
+  "_id": {
+    "$oid": "66a91d3ba005b2c1a0b0d2ad"
+  },
+  "cards": {
+    "legendaries": "1",
+    "heroics": "1",
+    "mythics": "1",
+    "super": "1",
+    "commons": "1"
+  },
+  "title": "Marvel Mix",
+  "description": "In this packet you will find 1 legendary + 1 heroic + 1 mythic + 1 super + 1 common",
+  "cost": "15",
+  "totalCards": "5",
+  "random": false,
+  "color": "#b50606",
+  "special": true,
+  "id": "66a91cffa005b2c1a0b0d2aa"
+},
+{
+  "_id": {
+    "$oid": "66d3398133d50d5bf1d325a0"
+  },
+  "cards": {
+    "mythics": "1",
+    "super": "",
+    "legendaries": "",
+    "heroics": "",
+    "commons": ""
+  },
+  "title": "Guardian Galaxy",
+  "description": "In this pack you will find 1 mythical figurine + 4 random figurines",
+  "cost": "5",
+  "totalCards": "5",
+  "random": true,
+  "color": "#b50606",
+  "special": true,
+  "id": "66a91d01a005b2c1a0b0d2ab"
+},
+{
+  "_id": {
+    "$oid": "66fe77e64785133071103430"
+  },
+  "cards": {
+    "legendaries": "1",
+    "heroics": "",
+    "mythics": "1",
+    "super": "",
+    "commons": ""
+  },
+  "title": "PROVA",
+  "description": "Prova trovi 5 carte",
+  "cost": "9",
+  "totalCards": "10",
+  "random": true,
+  "color": "#2f4393",
+  "special": false
+}]

@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "66d1e33b95160d484879f896"
+  },
+  "request": {
+    "credits": "",
+    "totalCards": "1",
+    "rarities": {
+      "legendary": "1",
+      "heroic": "",
+      "mythic": "",
+      "super": "",
+      "common": ""
+    },
+    "specifics": []
+  },
+  "offer": {
+    "credits": "1",
+    "specifics": [
+      {
+        "id": "1009157",
+        "name": "Spider-Girl (Anya Corazon)"
+      }
+    ]
+  },
+  "seller": {
+    "username": "gianluca03",
+    "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/531771a14fcf6.jpg",
+    "id": "66d1dacb61d11310fdbf9ee5"
+  },
+  "buyer": "luca03"
+},
+{
+  "_id": {
+    "$oid": "66d1e3f5c1dacf231c8e9f7a"
+  },
+  "request": {
+    "credits": "",
+    "totalCards": "1",
+    "rarities": {
+      "legendary": "1",
+      "heroic": "",
+      "mythic": "",
+      "super": "",
+      "common": ""
+    },
+    "specifics": []
+  },
+  "offer": {
+    "credits": "5",
+    "specifics": [
+      {
+        "id": "1013190",
+        "name": "Morgan Le Fay"
+      }
+    ]
+  },
+  "seller": {
+    "username": "gianluca03",
+    "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/531771a14fcf6.jpg",
+    "id": "66d1dacb61d11310fdbf9ee5"
+  },
+  "buyer": "luca03"
+},
+{
+  "_id": {
+    "$oid": "66d85fa678448fadf7e1ddc8"
+  },
+  "request": {
+    "credits": "1",
+    "totalCards": "",
+    "rarities": {
+      "legendary": "",
+      "heroic": "",
+      "mythic": "",
+      "super": "",
+      "common": ""
+    },
+    "specifics": []
+  },
+  "offer": {
+    "credits": "",
+    "specifics": [
+      {
+        "id": "1009372",
+        "name": "J. Jonah Jameson"
+      }
+    ]
+  },
+  "seller": {
+    "username": "gianluca03",
+    "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/531771a14fcf6.jpg",
+    "id": "66d1dacb61d11310fdbf9ee5"
+  },
+  "buyer": "Mario001"
+},
+{
+  "_id": {
+    "$oid": "66fe78ff4785133071103434"
+  },
+  "request": {
+    "credits": "",
+    "totalCards": "1",
+    "rarities": {
+      "legendary": "",
+      "heroic": "1",
+      "mythic": "",
+      "super": "",
+      "common": ""
+    },
+    "specifics": [
+      {
+        "id": "1010727",
+        "name": "Spider-dok"
+      }
+    ]
+  },
+  "offer": {
+    "credits": "",
+    "specifics": [
+      {
+        "id": "1011758",
+        "name": "Attuma"
+      }
+    ]
+  },
+  "seller": {
+    "username": "gianluca03",
+    "image": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg",
+    "id": "66d1dacb61d11310fdbf9ee5"
+  },
+  "buyer": ""
+}]

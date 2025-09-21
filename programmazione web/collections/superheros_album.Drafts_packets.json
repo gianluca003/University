@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "669eb12cd1579772c0869a14"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "2",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Rocket's Racket",
+  "description": "In this pack you will find 2 mythical figurines + 3 random ones",
+  "cost": "7",
+  "totalCards": "5",
+  "random": "on",
+  "color": "#b75506",
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "669eb19dd1579772c0869a15"
+  },
+  "cards": {
+    "legendaries": "2",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Legendaries Avengers",
+  "description": "In this packet you will find 2 legendaries figurines + 2 random",
+  "cost": "7",
+  "totalCards": "4",
+  "random": true,
+  "color": "#b50606",
+  "special": true,
+  "id": "669eb19dd1579772c0869a15"
+},
+{
+  "_id": {
+    "$oid": "66ccb7e8aec7e36faca5277e"
+  },
+  "cards": {
+    "legendaries": "1",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "Thunder of Thor",
+  "description": "In this pack you will find 1 legendary figurine + 3 random",
+  "cost": "10",
+  "totalCards": "4",
+  "random": "on",
+  "color": "#e7980f",
+  "special": false,
+  "id": "669eb209d1579772c0869a17"
+},
+{
+  "_id": {
+    "$oid": "66d5d55b5e281036571581b2"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "hie",
+  "description": "fef",
+  "cost": "33",
+  "totalCards": "32",
+  "random": true,
+  "color": "#b50606",
+  "special": true,
+  "id": "66d3595cd77e2a0937b2ffb2"
+},
+{
+  "_id": {
+    "$oid": "66d5d55f5e281036571581b3"
+  },
+  "cards": {
+    "legendaries": "",
+    "heroics": "",
+    "mythics": "",
+    "super": "",
+    "commons": ""
+  },
+  "title": "fhwfnlkew",
+  "description": "fijewlkf",
+  "cost": "19",
+  "totalCards": "2",
+  "random": true,
+  "color": "#b50606",
+  "special": true
+}]

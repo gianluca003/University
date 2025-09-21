@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "66d1dacb61d11310fdbf9ee5"
+  },
+  "firstName": "Gianluca",
+  "lastName": "Calderon",
+  "username": "gianluca03",
+  "email": "gianluca.calderonrivera@studenti.unimi.it",
+  "password": "3b91ff034da6961813e9c62b42f3e50155c95a6b4be6efcde286aff7c5142e9f",
+  "hero": "Hulk",
+  "credits": 35,
+  "creditCard": {
+    "nameHolder": "Gianluca",
+    "surnameHolder": "Calderon Rivera",
+    "number": "12351535312515",
+    "type": "visa",
+    "expireDate": "02/26",
+    "cvv": "1bde41ce9b4fccbf7dde0dc315d1aea5fa03f78c56feb1ba744be9e37fab2dce"
+  },
+  "signupDate": "2024-08-30",
+  "profileImage": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg"
+},
+{
+  "_id": {
+    "$oid": "66d1e447c1dacf231c8e9f7b"
+  },
+  "firstName": "Luca",
+  "lastName": "Calderon",
+  "username": "luca03",
+  "email": "luca.calderonrivera@studenti.unimi.it",
+  "password": "7eb05e890f61fcb89df880d021733f70663f61d25efd334fed0f87a3d90f4517",
+  "hero": "Captain America",
+  "credits": 67,
+  "creditCard": {
+    "nameHolder": "Gianluca",
+    "surnameHolder": "Calderon Rivera",
+    "number": "1234567899655",
+    "type": "mastercard",
+    "expireDate": "02/25",
+    "cvv": "236b565af6b512826fd89dbbde2e88b94465f780985c134e58b62dea6ee258b2"
+  },
+  "signupDate": "2024-08-30",
+  "profileImage": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087.jpg"
+},
+{
+  "_id": {
+    "$oid": "66d3375eba82774cfdff451e"
+  },
+  "firstName": "Mario",
+  "lastName": "Rossi",
+  "username": "Mario001",
+  "email": "mario.rossi@domain.com",
+  "password": "f0e56e3712b34e22bbecfb2efb82ea632b1b845223ad245672e469c32bbbf751",
+  "hero": "Spider-man",
+  "credits": 0,
+  "credit card": {
+    "nameHolder": null,
+    "surnameHolder": null,
+    "number": null,
+    "type": null,
+    "expireDate": null,
+    "cvv": null
+  },
+  "signupDate": "01-01-2024",
+  "profileImage": "https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
+},
+{
+  "_id": {
+    "$oid": "66fe79394785133071103435"
+  },
+  "firstName": "prova",
+  "lastName": "prova",
+  "username": "prova",
+  "email": "prova@prova.prova",
+  "password": "20d921521e0aee086490a01a0adcab485df5760bd1c70246c560c020856a12c6",
+  "hero": "Spider-Girl (Anya Corazon)",
+  "credits": 0,
+  "creditCard": {
+    "nameHolder": null,
+    "surnameHolder": null,
+    "number": null,
+    "type": null,
+    "expireDate": null,
+    "cvv": null
+  },
+  "signupDate": "2024-10-03",
+  "profileImage": "http://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f.jpg"
+}]
